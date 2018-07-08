@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Razor ve HTML</h2>
+
+
+
+@*razor ile değişken tanımlama*@
+
+@{
+    string ad = "isa";
+    string soyad = "kaya";
+
+    <b>@ad</b> <b>@soyad</b>
+}
+
+<h3> Karar yapıları</h3>
+@{
+    if (ad != null)
+    {
+        <span> İsim alanı boş değil</span>
+    }
+    else
+    {
+        <span> İsim alanı boş</span>
+    }
+}
+
+
+@*Razor ile döngüler*@
+
+@for (int i = 0; i < 10; i++)
+{
+    @ad<br />
+}
